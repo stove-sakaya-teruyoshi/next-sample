@@ -1,0 +1,12 @@
+services:
+  node:
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+      target: dev
+    ports:
+      - "3000:3000"
+      - "5000:5000"
+    volumes:
+      - .:/app/
+    tty: "true"
